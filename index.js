@@ -27,8 +27,15 @@ Aegir.on('ready', function () {
 Aegir.login(process.env.TOKEN);
 
 function getRandomInt(RandNbr) {
-	if (RandNbr==2){
+	if (RandNbr==750){
 		var Calc = Math.floor(Math.random() * Math.floor(RandNbr));
+		if (Calc>=0 && Calc<250){
+			Calc=0;
+		} else if (Calc>=250 && Calc<500){
+			Calc=1;
+		} else if (Calc>=500 && Calc<751){
+			Calc=2;
+		};
 	} else {
 		var Calc = Math.floor(Math.random() * Math.floor(RandNbr));
 		if (Calc>=0 && Calc<25){
@@ -39,58 +46,55 @@ function getRandomInt(RandNbr) {
 			Calc=2;
 		} else if (Calc>=96 && Calc<101){
 			Calc=3;
-		}
-	}
+		};
+	};
 	return Calc;
 };
 
 Aegir.on('message', msg => {
 	if (msg.content === "-gw2météo") {
-			for (var cpt=0;cpt<4;cpt++){
-				for (var ckc=0;ckc<6;ckc++){
-					var randinfluence = getRandomInt(100);
-					var tkt = getRandomInt(2);
+				for (var cpt=0;cpt<4;cpt++){
+					var txt = '';
+					for (var ckc=0;ckc<6;ckc++){
+					var tpt = getRandomInt(1000);
+					var tkt = getRandomInt(750);
 					if (ckc==0){
-						msg.channel.sendMessage(tab[cpt][ckc]);
+						txt=(tab[cpt][ckc]);
 					} else {
 						if(cpt==0){
-                        	if(tkt==1){
-                                tkt=2;
-							};
-                            msg.channel.sendMessage(tab[cpt][ckc]+' '+tab2[tkt][randinfluence]);
-                        } else if(cpt==1) {
-                        	if(ckc==1){
-								tkt=1;
-							} else if(ckc==4 || ckc==5){
-								if(tkt==1){
-                                	tkt=2;
-                                };
-							} else {
-								if(tkt==2){
-                                	tkt=0;
-                                };
-							};
-                            msg.channel.sendMessage(tab[cpt][ckc]+' '+tab2[tkt][randinfluence]);
-                        } else if(cpt==2){
-							if(ckc==1){
-								tkt=2;
-							} else if(ckc==4){
-								tkt=1;
-							} else {
-								if(tkt==1){
-                                	tkt=2;
-                                };
-							};
-							msg.channel.sendMessage(tab[cpt][ckc]+' '+tab2[tkt][randinfluence]);
-						} else if(cpt==3){
+						if(tkt==1){
 							tkt=2;
-							msg.channel.sendMessage(tab[cpt][ckc]+' '+tab2[tkt][randinfluence]);
-						} else {
-							msg.channel.sendMessage(tab[cpt][ckc]+' '+tab2[tkt][randinfluence]);
 						};
+					} else if(cpt==1) {
+						if(ckc==1){
+							tkt=1;
+						} else if(ckc==4 || ckc==5){
+							if(tkt==1){
+							tkt=2;
+							};
+						} else {
+							if(tkt==2){
+								tkt=0;
+							};
+						};
+					} else if(cpt==2){
+						if(ckc==1){
+							tkt=2;
+						} else if(ckc==4){
+							tkt=1;
+						} else {
+							if(tkt==1){
+								tkt=2;
+							};
+						};
+					} else if(cpt==3){
+						tkt=2;
 					};
+					txt = txt+'\n'+(tab[cpt][ckc]+' '+tab2[tkt][tpt]);
 				};
-			};	
+			};
+			msg.channel.sendMessage(txt);
+		};
 	};
 });
 
