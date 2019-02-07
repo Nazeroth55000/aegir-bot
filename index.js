@@ -51,13 +51,13 @@ Aegir.on('message', msg => {
 					var randinfluence = getRandomInt(100);
 					var tkt = getRandomInt(2);
 					if (ckc==0){
-						msg.channel.sendMessage("<p>"+tab[cpt][ckc]+"</p>");
+						msg.channel.sendMessage(tab[cpt][ckc]);
 					} else {
 						if(cpt==0){
                         	if(tkt==1){
                                 tkt=2;
 							};
-                            msg.channel.sendMessage("<p>"+tab[cpt][ckc]+' '+tab2[tkt][randinfluence]+"</p>");
+                            msg.channel.sendMessage(tab[cpt][ckc]+' '+tab2[tkt][randinfluence]);
                         } else if(cpt==1) {
                         	if(ckc==1){
 								tkt=1;
@@ -70,7 +70,7 @@ Aegir.on('message', msg => {
                                 	tkt=0;
                                 };
 							};
-                            msg.channel.sendMessage("<p>"+tab[cpt][ckc]+' '+tab2[tkt][randinfluence]+"</p>");
+                            msg.channel.sendMessage(tab[cpt][ckc]+' '+tab2[tkt][randinfluence]);
                         } else if(cpt==2){
 							if(ckc==1){
 								tkt=2;
@@ -81,12 +81,12 @@ Aegir.on('message', msg => {
                                 	tkt=2;
                                 };
 							};
-							msg.channel.sendMessage("<p>"+tab[cpt][ckc]+' '+tab2[tkt][randinfluence]+"</p>");
+							msg.channel.sendMessage(tab[cpt][ckc]+' '+tab2[tkt][randinfluence]);
 						} else if(cpt==3){
 							tkt=2;
-							msg.channel.sendMessage("<p>"+tab[cpt][ckc]+' '+tab2[tkt][randinfluence]+"</p>");
+							msg.channel.sendMessage(tab[cpt][ckc]+' '+tab2[tkt][randinfluence]);
 						} else {
-							msg.channel.sendMessage("<p>"+tab[cpt][ckc]+' '+tab2[tkt][randinfluence]+"</p>");
+							msg.channel.sendMessage(tab[cpt][ckc]+' '+tab2[tkt][randinfluence]);
 						};
 					};
 				};
