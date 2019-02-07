@@ -16,7 +16,7 @@ var tab = [
 var tab2 = [
 	['*Averse*','*Pluie*','*Pluie Battante*','*Orage*'],
     ['*Flocons*','*Neige*','*Fortes Neiges*','*Blizzard*'],
-    ['*Nuageux*','*Eclaircie','*Ensoleillé*','*Canicule*']
+    ['*Nuageux*','*Eclaircie*','*Ensoleillé*','*Canicule*']
 ];
 
 Aegir.on('ready', function () {
