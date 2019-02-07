@@ -53,47 +53,40 @@ function getRandomInt(RandNbr) {
 
 Aegir.on('message', msg => {
 	if (msg.content === "-gw2météo") {
-				for (var cpt=0;cpt<4;cpt++){
-					var txt = '';
-					for (var ckc=0;ckc<6;ckc++){
-					var tpt = getRandomInt(1000);
-					var tkt = getRandomInt(750);
+		for (var cpt=0;cpt<4;cpt++){
+			var txt = '';
+			for (var ckc=0;ckc<6;ckc++){
+				var tpt = getRandomInt(1000);
+				var tkt = getRandomInt(750);
 					if (ckc==0){
-						txt=(tab[cpt][ckc]);
+					txt = tab[cpt][ckc];
 					} else {
-						if(cpt==0){
-						if(tkt==1){
+						if(cpt==0 && tkt==1){
 							tkt=2;
-						};
-					} else if(cpt==1) {
-						if(ckc==1){
-							tkt=1;
-						} else if(ckc==4 || ckc==5){
-							if(tkt==1){
-							tkt=2;
-							};
-						} else {
-							if(tkt==2){
+						} else if(cpt==1) {
+							if(ckc==1){
+								tkt=1;
+							} else if(tkt==1 && ckc==4 || ckc==5){
+								tkt=2;
+							} else if(tkt==2){
 								tkt=0;
 							};
-						};
-					} else if(cpt==2){
-						if(ckc==1){
-							tkt=2;
-						} else if(ckc==4){
-							tkt=1;
-						} else {
+						} else if(cpt==2){
+							if(ckc==1){
+								tkt=2;
+							} else if(ckc==4){
+								tkt=1;
+							};
 							if(tkt==1){
 								tkt=2;
 							};
+						} else if(cpt==3){
+							tkt=2;
 						};
-					} else if(cpt==3){
-						tkt=2;
+						    txt = txt + '<p>'+tab[cpt][ckc]+' '+tab2[tkt][tpt]+'<\p>';
 					};
-					txt = txt+(tab[cpt][ckc]+' '+tab2[tkt][tpt])+'\n';
 				};
-			};
-			msg.channel.sendMessage(txt);
+				msg.channel.sendMessage(txt);
 		};
 	};
 });
