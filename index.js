@@ -9,7 +9,7 @@ var oneDay = 1000 * 60 * 60 * 24;
 var getDayNbr = Math.floor(diff / oneDay);
 var tab = [
 	['```INFLUENCE KRYTIENNE :```','**La Kryte Littorale :**','**La Jungle de Maguuma :**','**La Baie de Janthir :**','**Les Côtes Ternies :**','**Les Cascades Forestières :**'],
-	['```INFLUENCE ASCALONIENNE :```','Les Lointaines Cîmefroides :**','**Les Chaînes des Cîmefroides :**','**La Façade de Deldrimor :**','**L’Ancienne Ascalon :**','**Les Terres Natales Charrs :**'],
+	['```INFLUENCE ASCALONIENNE :```','**Les Lointaines Cîmefroides :**','**Les Chaînes des Cîmefroides :**','**La Façade de Deldrimor :**','**L’Ancienne Ascalon :**','**Les Terres Natales Charrs :**'],
 	['```INFLUENCE ORIENNE :```','**Le Cercle de Feu :**','**La Mer des Lamentations :**','**Les Ruines d’Orr :**','**Les Chaînes de Poîntebrume :**','**La Chaussée du Charognard :**'],
 	['```INFLUENCE ELONIENNE :```','**Le Désert de Cristal :**','**Le Domaine de Kourna :**','**Les Etendues de Vabbi :**','**L’Archipel d’Istan :**','**La Désolation d’Elona :**']
 ];
