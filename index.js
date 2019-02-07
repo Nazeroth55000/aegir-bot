@@ -83,7 +83,7 @@ Aegir.on('message', msg => {
 						} else if(cpt==3){
 							tkt=2;
 						};
-						    txt = txt + '<p>'+tab[cpt][ckc]+' '+tab2[tkt][tpt]+'<\p>';
+						    txt = txt+tab[cpt][ckc]+' '+tab2[tkt][tpt]+'\n';
 					};
 				};
 				msg.channel.sendMessage(txt);
