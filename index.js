@@ -38,13 +38,13 @@ function getRandomInt(RandNbr) {
 		};
 	} else {
 		var Calc = Math.floor(Math.random() * Math.floor(RandNbr));
-		if (Calc>=0 && Calc<25){
+		if (Calc>=0 && Calc<250){
 			Calc=0;
-		} else if (Calc>=25 && Calc<75){
+		} else if (Calc>=250 && Calc<500){
 			Calc=1;
-		} else if (Calc>=75 && Calc<96){
+		} else if (Calc>=500 && Calc<750){
 			Calc=2;
-		} else if (Calc>=96 && Calc<101){
+		} else if (Calc>=750 && Calc<1001){
 			Calc=3;
 		};
 	};
