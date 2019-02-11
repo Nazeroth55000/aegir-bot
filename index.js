@@ -82,7 +82,7 @@ Aegir.on('message', msg => {
 				var tpt = getRandomInt(1000);
 				var tkt = getRandomInt(750);
 					if (ckc==0){
-					txt = tab[cpt][ckc];
+						txt = tab[cpt][ckc];
 					} else {
 						if(cpt==0 && tkt==1){
 							tkt=2;
@@ -106,13 +106,12 @@ Aegir.on('message', msg => {
 						} else if(cpt==3){
 							tkt=2;
 						};
-						    txt = txt+tab[cpt][ckc]+' '+tab2[tkt][tpt]+'\n';
+						txt = txt+tab[cpt][ckc]+' '+tab2[tkt][tpt]+'\n';
 					};
-				};
-				msg.channel.sendMessage(txt);
+			};
+			msg.channel.sendMessage(txt);
 		};
-	};
-	if (msg.content === "-rlmétéo") {
+	} else if (msg.content === "-rlmétéo") {
 		var pxp = '';
 		for (var mtp=0;mtp<6;mtp++){
 			var fdp = getRandomInt(3015);
