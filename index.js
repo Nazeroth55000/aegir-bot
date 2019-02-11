@@ -18,8 +18,8 @@ var tab2 = [
 	['*Flocons*','*Neige*','*Fortes Neiges*','*Blizzard*'],
 	['*Nuageux*','*Éclaircie*','*Ensoleillé*','*Canicule*']
 ];
-/*var tabrl = ['```RUMEURS LOINTAINES :```',"**Congères d'Antreneige :**",'**Contreforts du Voyageur :**','**Détroit des Gorges Glacées :**','**Lointaines Cimefroides :**','**Confins de Givramer :**'];
-var tabrl2 = ['*Nuageux*','*Éclaircie*','*Ensoleillé*','*Bruine*','*Pluie*','*Flocons*','*Neige*','*Fortes Neiges*','*Blizzard*'];*/
+var tabrl = ['```RUMEURS LOINTAINES :```',"**Congères d'Antreneige :**",'**Contreforts du Voyageur :**','**Détroit des Gorges Glacées :**','**Lointaines Cimefroides :**','**Confins de Givramer :**'];
+var tabrl2 = ['*Nuageux*','*Éclaircie*','*Ensoleillé*','*Bruine*','*Pluie*','*Flocons*','*Neige*','*Fortes Neiges*','*Blizzard*'];
 
 Aegir.on('ready', function () {
 	Aegir.user.setActivity("Aide : -help");
