@@ -100,7 +100,8 @@ Aegir.on('message', msg => {
 			};
 			msg.channel.sendMessage(txt);
 		};
-	}; /*else if (msg.content === "-rlmétéo") {
+	};
+	if (msg.content === "-rlmétéo") {
 		var pxp = '';
 		for (var mtp=0;mtp<6;mtp++){
 			var fdp = getRandomInt(2250);
@@ -111,7 +112,7 @@ Aegir.on('message', msg => {
 			};
 		};
 		msg.channel.sendMessage(pxp);
-	};*/
+	};
 });
 
 Aegir.on('message', helpMsg => {
