@@ -14,10 +14,12 @@ var tab = [
 	['```INFLUENCE ELONIENNE :```','**Le Désert de Cristal :**','**Le Domaine de Kourna :**','**Les Etendues de Vabbi :**','**L’Archipel d’Istan :**','**La Désolation d’Elona :**']
 ];
 var tab2 = [
-	['*Averse*','*Pluie*','*Pluie Battante*','*Orage*'],
-    ['*Flocons*','*Neige*','*Fortes Neiges*','*Blizzard*'],
-    ['*Nuageux*','*Eclaircie*','*Ensoleillé*','*Canicule*']
+	['*Bruine*','*Pluie*','*Pluie Battante*','*Orage*'],
+	['*Flocons*','*Neige*','*Fortes Neiges*','*Blizzard*'],
+	['*Nuageux*','*Éclaircie*','*Ensoleillé*','*Canicule*']
 ];
+var tabrl = ['```RUMEURS LOINTAINES :```','**Congères d'+"'"+'Antreneige :**','**Contreforts du Voyageur :**','**Détroit des Gorges Glacées :**','**Lointaines Cimefroides :**','**Confins de Givramer :**'];
+var tabrl2 = ['*Nuageux*','*Éclaircie*','*Ensoleillé*','*Bruine*','*Pluie*','*Flocons*','*Neige*','*Fortes Neiges*','*Blizzard*'];
 
 Aegir.on('ready', function () {
 	Aegir.user.setActivity("Aide : -help");
@@ -35,6 +37,27 @@ function getRandomInt(RandNbr) {
 			Calc=1;
 		} else if (Calc>=500 && Calc<751){
 			Calc=2;
+		};
+	} else if (RandNbr==3015){
+		var Calc var Calc = Math.floor(Math.random() * Math.floor(RandNbr));
+		if (Calc>=0 && Calc<335){
+			Calc=0;
+		} else if (Calc>=335 && Calc<670){
+			Calc=1;
+		} else if (Calc>=670 && Calc<1005){
+			Calc=2;
+		} else if (Calc>=1005 && Calc<1340){
+			Calc=3;
+		} else if (Calc>=1340 && Calc<1670){
+			Calc=4;
+		} else if (Calc>=1670 && Calc<2010){
+			Calc=5;
+		} else if (Calc>=2010 && Calc<2345){
+			Calc=6;
+		} else if (Calc>=2345 && Calc<2680){
+			Calc=7;
+		}else if (Calc>=2680 && Calc<3016){
+			Calc=8;
 		};
 	} else {
 		var Calc = Math.floor(Math.random() * Math.floor(RandNbr));
@@ -88,6 +111,18 @@ Aegir.on('message', msg => {
 				};
 				msg.channel.sendMessage(txt);
 		};
+	};
+	if (msg.content === "-rlmétéo") {
+		var pxp = '';
+		for (var mtp=0;mtp<6;mtp++){
+			var fdp = getRandomInt(3015);
+			if (mtp==0){
+				pxp = tabrl[mtp];
+			} else {
+				pxp = pxp+tabrl[mtp]+' '+tabrl2[fdp]+'\n';
+			};
+		};
+		msg.channel.sendMessage(pxp);
 	};
 });
 
