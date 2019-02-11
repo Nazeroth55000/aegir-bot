@@ -38,7 +38,7 @@ function getRandomInt(RandNbr) {
 		} else if (Calc>=500 && Calc<751){
 			Calc=2;
 		};
-	} else if (RandNbr==3015){
+	} /*else if (RandNbr==3015){
 		var Calc var Calc = Math.floor(Math.random() * Math.floor(RandNbr));
 		if (Calc>=0 && Calc<335){
 			Calc=0;
@@ -59,7 +59,7 @@ function getRandomInt(RandNbr) {
 		}else if (Calc>=2680 && Calc<3016){
 			Calc=8;
 		};
-	} else {
+	}*/ else {
 		var Calc = Math.floor(Math.random() * Math.floor(RandNbr));
 		if (Calc>=0 && Calc<250){
 			Calc=0;
