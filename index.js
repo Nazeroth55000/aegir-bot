@@ -18,8 +18,8 @@ var tab2 = [
 	['*Flocons*','*Neige*','*Fortes Neiges*','*Blizzard*'],
 	['*Nuageux*','*Éclaircie*','*Ensoleillé*','*Canicule*']
 ];
-var tabrl = ['```RUMEURS LOINTAINES :```',"**Congères d'Antreneige :**",'**Contreforts du Voyageur :**','**Détroit des Gorges Glacées :**','**Lointaines Cimefroides :**','**Confins de Givramer :**'];
-var tabrl2 = ['*Nuageux*','*Éclaircie*','*Ensoleillé*','*Bruine*','*Pluie*','*Flocons*','*Neige*','*Fortes Neiges*','*Blizzard*'];
+/*var tabrl = ['```RUMEURS LOINTAINES :```',"**Congères d'Antreneige :**",'**Contreforts du Voyageur :**','**Détroit des Gorges Glacées :**','**Lointaines Cimefroides :**','**Confins de Givramer :**'];
+var tabrl2 = ['*Nuageux*','*Éclaircie*','*Ensoleillé*','*Bruine*','*Pluie*','*Flocons*','*Neige*','*Fortes Neiges*','*Blizzard*'];*/
 
 Aegir.on('ready', function () {
 	Aegir.user.setActivity("Aide : -help");
@@ -38,7 +38,7 @@ function getRandomInt(RandNbr) {
 		} else if (Calc>=500 && Calc<751){
 			Calc=2;
 		};
-	} else if (RandNbr==3015){
+	} /*else if (RandNbr==3015){
 		var Calc var Calc = Math.floor(Math.random() * Math.floor(RandNbr));
 		if (Calc>=0 && Calc<335){
 			Calc=0;
@@ -59,7 +59,7 @@ function getRandomInt(RandNbr) {
 		}else if (Calc>=2680 && Calc<3016){
 			Calc=8;
 		};
-	} else {
+	}*/ else {
 		var Calc = Math.floor(Math.random() * Math.floor(RandNbr));
 		if (Calc>=0 && Calc<250){
 			Calc=0;
@@ -111,7 +111,7 @@ Aegir.on('message', msg => {
 			};
 			msg.channel.sendMessage(txt);
 		};
-	} else if (msg.content === "-rlmétéo") {
+	}; /*else if (msg.content === "-rlmétéo") {
 		var pxp = '';
 		for (var mtp=0;mtp<6;mtp++){
 			var fdp = getRandomInt(3015);
@@ -122,7 +122,7 @@ Aegir.on('message', msg => {
 			};
 		};
 		msg.channel.sendMessage(pxp);
-	};
+	};*/
 });
 
 Aegir.on('message', helpMsg => {
