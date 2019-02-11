@@ -18,7 +18,7 @@ var tab2 = [
 	['*Flocons*','*Neige*','*Fortes Neiges*','*Blizzard*'],
 	['*Nuageux*','*Éclaircie*','*Ensoleillé*','*Canicule*']
 ];
-var tabrl = ['```RUMEURS LOINTAINES :```','**Congères d'+"'"+'Antreneige :**','**Contreforts du Voyageur :**','**Détroit des Gorges Glacées :**','**Lointaines Cimefroides :**','**Confins de Givramer :**'];
+var tabrl = ['```RUMEURS LOINTAINES :```',"**Congères d'Antreneige :**",'**Contreforts du Voyageur :**','**Détroit des Gorges Glacées :**','**Lointaines Cimefroides :**','**Confins de Givramer :**'];
 var tabrl2 = ['*Nuageux*','*Éclaircie*','*Ensoleillé*','*Bruine*','*Pluie*','*Flocons*','*Neige*','*Fortes Neiges*','*Blizzard*'];
 
 Aegir.on('ready', function () {
@@ -125,27 +125,17 @@ Aegir.on('message', msg => {
 	};
 });
 
-
 Aegir.on('message', helpMsg => {
 	if (helpMsg.content === "-help") {
 		if (a === 0){
-			
 			helpMsg.channel.sendMessage('"**Aucune aide ne vous sera apportez, ce bot ne donne que la météo et rien de plus.**"');
-			
 			a = 1;
-			
 		} else if (a === 1) {
-			
 			helpMsg.channel.sendMessage('"**Je n'+"'"+'ai que faire de vos suppliques.**"');
-			
 			a = 2;
-			
 		} else if (a === 2) {
-			
 			helpMsg.channel.sendMessage('"**Vous n'+"'"+'obtiendrez rien ainsi...**"');
-			
 			a = 0;
-			
 		};
 	};
 });
