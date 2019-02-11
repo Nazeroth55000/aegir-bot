@@ -38,28 +38,7 @@ function getRandomInt(RandNbr) {
 		} else if (Calc>=500 && Calc<751){
 			Calc=2;
 		};
-	} /*else if (RandNbr==3015){
-		var Calc var Calc = Math.floor(Math.random() * Math.floor(RandNbr));
-		if (Calc>=0 && Calc<335){
-			Calc=0;
-		} else if (Calc>=335 && Calc<670){
-			Calc=1;
-		} else if (Calc>=670 && Calc<1005){
-			Calc=2;
-		} else if (Calc>=1005 && Calc<1340){
-			Calc=3;
-		} else if (Calc>=1340 && Calc<1670){
-			Calc=4;
-		} else if (Calc>=1670 && Calc<2010){
-			Calc=5;
-		} else if (Calc>=2010 && Calc<2345){
-			Calc=6;
-		} else if (Calc>=2345 && Calc<2680){
-			Calc=7;
-		}else if (Calc>=2680 && Calc<3016){
-			Calc=8;
-		};
-	}*/ else {
+	} else {
 		var Calc = Math.floor(Math.random() * Math.floor(RandNbr));
 		if (Calc>=0 && Calc<250){
 			Calc=0;
@@ -69,6 +48,16 @@ function getRandomInt(RandNbr) {
 			Calc=2;
 		} else if (Calc>=750 && Calc<1001){
 			Calc=3;
+		} else if (Calc>=1001 && Calc<1250){
+			Calc=4;
+		} else if (Calc>=1250 && Calc<1500){
+			Calc=5;
+		} else if (Calc>=1500 && Calc<1750){
+			Calc=6;
+		} else if (Calc>=1750 && Calc<2000){
+			Calc=7;
+		} else if (Calc>=2000 && Calc<2251){
+			Calc=8;
 		};
 	};
 	return Calc;
@@ -114,7 +103,7 @@ Aegir.on('message', msg => {
 	}; /*else if (msg.content === "-rlmétéo") {
 		var pxp = '';
 		for (var mtp=0;mtp<6;mtp++){
-			var fdp = getRandomInt(3015);
+			var fdp = getRandomInt(2250);
 			if (mtp==0){
 				pxp = tabrl[mtp];
 			} else {
